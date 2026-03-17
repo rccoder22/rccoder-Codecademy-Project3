@@ -1,0 +1,29 @@
+DROP DATABASE IF EXISTS baseball_stats_db;
+CREATE DATABASE baseball_stats_db;
+
+CREATE TABLE players (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  team VARCHAR(255) NOT NULL,
+  position VARCHAR(255) NOT NULL,
+  Bats VARCHAR(1) NOT NULL,
+  Throws VARCHAR(1) NOT NULL,
+  Birthdate DATE NOT NULL
+);
+
+CREATE TABLE stats (
+  id SERIAL PRIMARY KEY,
+  player_id INTEGER REFERENCES players(id),
+  year INTEGER NOT NULL,
+  league VARCHAR(255) NOT NULL,
+  team VARCHAR(255) NOT NULL,
+  games INTEGER NOT NULL,
+  at_bats INTEGER NOT NULL,
+  runs INTEGER NOT NULL,
+  hits INTEGER NOT NULL,
+  doubles INTEGER NOT NULL,
+  triples INTEGER NOT NULL,
+  home_runs INTEGER NOT NULL,
+  runs_batted_in INTEGER NOT NULL,
+  stolen_bases INTEGER NOT NULL
+);
