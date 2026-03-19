@@ -12,12 +12,12 @@ CREATE TABLE players (
 );
 
 CREATE TABLE stats (
-  id SERIAL PRIMARY KEY,
-  player_id INTEGER REFERENCES players(player_id) NOT NULL,
-  year INTEGER NOT NULL,
-  league VARCHAR(255) NOT NULL,
+  player_id REFERENCES players(player_id) NOT NULL,
+  player_name REFERENCES players(player_name) NOT NULL,
   team VARCHAR(255) REFERENCES players(team) NOT NULL,
+  league VARCHAR(255) NOT NULL,
   games INTEGER NOT NULL,
+  batting_average DECIMAL(4,3) NOT NULL,
   at_bats INTEGER NOT NULL,
   runs INTEGER NOT NULL,
   hits INTEGER NOT NULL,
@@ -25,5 +25,6 @@ CREATE TABLE stats (
   triples INTEGER NOT NULL,
   home_runs INTEGER NOT NULL,
   runs_batted_in INTEGER NOT NULL,
+  walks INTEGER NOT NULL,
   stolen_bases INTEGER NOT NULL
 );
