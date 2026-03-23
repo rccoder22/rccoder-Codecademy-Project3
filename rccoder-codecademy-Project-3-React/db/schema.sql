@@ -1,5 +1,5 @@
-DROP DATABASE IF EXISTS baseball_stats_db;
-CREATE DATABASE baseball_stats_db;
+DROP DATABASE IF EXISTS Baseball_Stats_db;
+CREATE DATABASE Baseball_Stats_db;
 
 CREATE TABLE players (
   player_id SERIAL PRIMARY KEY,
