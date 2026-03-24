@@ -18,7 +18,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dev": "nodemon server"
+    "dev": "nodemon server",
+    "seed": "node seeds/scripts/seedAll.js"
   },
   "eslintConfig": {
     "extends": [
