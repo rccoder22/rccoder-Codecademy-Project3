@@ -3,7 +3,7 @@ const {client} = require('pg');
 const con = new client ({
     host: 'localhost',
     user: 'postgres',
-    port: 3000,
+    port: 3001,
     password: 'password',
     database: 'BaseballStats_db'
 });
