@@ -19,3 +19,5 @@ con.connect().then(() => {
         }
     });
 });
+
+module.exports = con;
